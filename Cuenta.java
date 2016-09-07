@@ -7,11 +7,11 @@ Contiene los atributos y metodos que tienen las cuentas.
 public class Cuenta {
 	//ATRIBUTOS
 	private String nombre, nroCuenta;
-	private Double interes, saldo;
+	private double interes, saldo;
 	private int id;
 	
 	//Constructor con parametros completo
-	Cuenta(int id, String nombre, String nroCuenta, Double interes, Double saldo){
+	Cuenta(int id, String nombre, String nroCuenta, double interes, double saldo){
 		this.id=id;
 		this.nombre=nombre;
 		this.nroCuenta=nroCuenta;
@@ -45,20 +45,20 @@ public class Cuenta {
 	public void setnroCuenta(String nroCuenta) {
 		this.nroCuenta = nroCuenta;
 	}
-	public Double getInteres() {
+	public double getInteres() {
 		return interes;
 	}
-	public void setInteres(Double interes) {
+	public void setInteres(double interes) {
 		this.interes = interes;
 	}
-	public Double getSaldo() {
+	public double getSaldo() {
 		return saldo;
 	}
-	public void setSaldo(Double saldo) {
+	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
 	//Comprueba que el saldo ingresado sea positivo, de lo contrario se inicializa en 0
-	public Double comprobarSaldo(Double saldo) {
+	public double comprobarSaldo(double saldo) {
 		if(saldo<0)
 			saldo=0.0;
 		return saldo;
@@ -91,7 +91,7 @@ public class Cuenta {
 		return reintegro;
 	}
 	//Compruebo que se pueda realizar la transferencia y retorno un boolean de acuerdo a si es posible o no
-	public boolean transferencias(Cuenta obj, Double monto){ //recibo como paremetros el monto y la cuenta destino
+	public boolean transferencias(Cuenta obj, double monto){ //recibo como paremetros el monto y la cuenta destino
 		boolean transferencia=true;//por defecto mi booleano va a ser true para que se pueda realizar
 		monto=obj.comprobarSaldo(monto);
 		try{
