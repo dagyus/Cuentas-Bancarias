@@ -6,15 +6,15 @@ Contiene los atributos y metodos que tienen las cuentas.
 ***********************************************************************************************************************/
 public class Cuenta {
 	//ATRIBUTOS
-	private String nombre, nro_cuenta;
+	private String nombre, nroCuenta;
 	private Double interes, saldo;
 	private int id;
 	
 	//Constructor con parametros completo
-	Cuenta(int id, String nombre, String nro_cuenta, Double interes, Double saldo){
+	Cuenta(int id, String nombre, String nroCuenta, Double interes, Double saldo){
 		this.id=id;
 		this.nombre=nombre;
-		this.nro_cuenta=nro_cuenta;
+		this.nroCuenta=nroCuenta;
 		this.interes=interes;
 		this.saldo=comprobarSaldo(saldo);
 	}
@@ -22,7 +22,7 @@ public class Cuenta {
 	Cuenta(){
 		this.id=0;
 		this.nombre="";
-		this.nro_cuenta="";
+		this.nroCuenta="";
 		this.interes=0.0;
 		this.saldo=0.0;
 	}
@@ -39,11 +39,11 @@ public class Cuenta {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getNro_cuenta() {
-		return nro_cuenta;
+	public String getnroCuenta() {
+		return nroCuenta;
 	}
-	public void setNro_cuenta(String nro_cuenta) {
-		this.nro_cuenta = nro_cuenta;
+	public void setnroCuenta(String nroCuenta) {
+		this.nroCuenta = nroCuenta;
 	}
 	public Double getInteres() {
 		return interes;
@@ -110,7 +110,7 @@ public class Cuenta {
 	public String toString(){
 		return "ID: " + id +
 				"\tNOMBRE: " + nombre +
-				"\tNro. de CUENTA: " + nro_cuenta +
+				"\tNro. de CUENTA: " + nroCuenta +
 				"\tINTERES: " + interes +
 				"\tSALDO: " + saldo;
 	}
