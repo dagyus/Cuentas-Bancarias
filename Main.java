@@ -10,6 +10,9 @@ se esta situado en el menu.
 import java.util.ArrayList;
 import java.util.Scanner;
 /**********************************************************************************************************************/
+/**
+*	@author DSept
+*/
 public class Main {
 	//mis ID van a ir de 100 en adelante incrementandose automaticamente y a su vez aumenta mi cantidad de cuentas
 	static int id=100, cantidadCuentas=0; 
